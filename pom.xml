@@ -3,8 +3,8 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.springframework.samples</groupId>
-     <artifactId>jpetstore</artifactId>
-    <name>jpetstore</name>
+     <artifactId>demominsait</artifactId>
+    <name>demominsait</name>
     <packaging>war</packaging>
     <version>${build.number}</version>
     <properties>
@@ -247,13 +247,13 @@
       <activation>
         <activeByDefault>true</activeByDefault>
       </activation>
-      <properties>
-        <sonar.host.url>http://10.29.2.200:9000</sonar.host.url>
-	<sonar.login>604565149072bd9cd235b1673d89a85ee0aeed7a</sonar.login>
-        <sonar.projectName>jpetstore</sonar.projectName>
-        <sonar.projectVersion>master</sonar.projectVersion>
-        
-      </properties>
+        <properties>
+            <sonar.host.url>http://192.168.1.47:9001</sonar.host.url>
+            <sonar.login>a85cd4ed2cc335fcfb709e3b7b8f881de9884fb4</sonar.login>
+            <sonar.projectName>demominsait</sonar.projectName>
+            <sonar.projectVersion>master</sonar.projectVersion>
+
+        </properties>
     </profile>
   </profiles>
     

@@ -1,13 +1,13 @@
 node('java-docker-slave') {
     stage ('CheckOut GitHub') {
         
-     	 checkout([$class: 'GitSCM', branches: [[name: '*/testjenkins']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'githubjon', url: 'https://github.com/juananmora/jpetstore.git']]]) 
+     	 checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'githubjon', url: 'https://github.com/juananmora/demo-minsait-local.git']]])
 	}
     stage ('Build') {
          sh "mvn package" 
     }
 	stage ('Upload Artifact') {
-	   nexusPublisher nexusInstanceId: 'localNexus', nexusRepositoryId: 'releases', packages: [[$class: 'MavenPackage', mavenAssetList: [[classifier: '', extension: '', filePath: 'target/jpetstore.war']], mavenCoordinate: [artifactId: 'jpetstore', groupId: 'org.jenkins-ci.testjenkins', packaging: 'war', version: '$BUILD_NUMBER']]]
+	   nexusPublisher nexusInstanceId: 'localNexus', nexusRepositoryId: 'releases', packages: [[$class: 'MavenPackage', mavenAssetList: [[classifier: '', extension: '', filePath: 'target/demominsait.war']], mavenCoordinate: [artifactId: 'demominsait', groupId: 'org.jenkins-ci.demominsait', packaging: 'war', version: '$BUILD_NUMBER']]]
 	}
 	stage('SonarQube analysis') {
 		withSonarQubeEnv('sonar') {
@@ -25,12 +25,12 @@ node('java-docker-slave') {
     docker.withTool("docker") { 
 		withDockerServer([credentialsId: "", uri: "unix:///var/run/docker.sock"]) { 
 			stage ('Deploy') {
-				 sh "docker cp ./target/jpetstore.war tomcatcomposedos:/opt/apache-tomcat-8.5.37/webapps/"
+				 sh "docker cp ./target/demominsait.war tomcatcomposedos:/opt/apache-tomcat-8.5.37/webapps/"
 				 sh "docker restart tomcatcomposedos"
 			}
 			stage ('Updates BBDD'){
 				 sh "docker cp update.sql mysqlcompose:/"
-				 sh "docker exec -i mysqlcompose mysql -uroot -pbmcAdm1n jpetstore < update.sql;"
+				 sh "docker exec -i mysqlcompose mysql -uroot -pbmcAdm1n demominsait < update.sql;"
 
 			 }
 			stage ('Build Image'){
