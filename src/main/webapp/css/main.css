@@ -1,0 +1,123 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial;
+	font-weight: 400;
+	overflow-y: hidden;
+}
+
+a {
+	text-decoration: none;
+}
+
+#carrito{
+	width: 50px;
+	position: relative;
+	top: 15px;
+}
+
+.container-wrapper{
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+}
+
+.header-navbar {
+	overflow: visible;
+}
+
+.container-wrapper-logo{
+    padding: 15px 25px;
+	width: 60%;
+	display: inline-block;
+}
+
+.container-wrapper-footbar-logo{
+    padding: 22px 25px;
+	width: 85%;
+	display: inline-block;
+}
+
+#content{
+	background: url(../img-minsait/GettyImages-697387737.jpg) no-repeat center fixed;
+	background-size: cover;
+	height: 100%;
+}
+
+.end-logo{
+	display: inline-block;
+}
+
+#cartbar {
+	width: 15%;
+	display: inline-block;
+}
+
+#buscador {
+	width: 15%;
+	display: inline-block;
+}
+
+.container-wrapper-logo-inner{
+	margin: auto;
+}
+
+#topbar {
+	border-bottom: 1px solid #E4DEDB;
+	height:5em;
+}
+
+#footbar {
+	background-color: #004153;
+	height: 3em;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+}
+
+#footbar .logo{
+	width: 105px;
+}
+
+#welcome-box{
+	background-color: #004153;
+	color: white;
+	position: absolute;
+	display: inline-block;
+	font-size: .8em;
+	height: 10em;
+	left: 10em;
+	top: 25%;
+	padding: 4em;
+	width:25em;
+	font-family: PlayfairDisplay-Regular;
+    font-size: 1vw;
+}
+
+#welcome-box:after{
+}
+
+.vertical-separator{
+	border-bottom: 2px solid white;
+	content:"";
+	display: block;
+	width: 25%;
+	margin: 5px 0 15px 0;
+}
+
+#welcome-subtitle{
+    font-size: 1vw;
+}
+
+#welcome-text{
+	text-align: center;
+	font-size: 60px;
+	position: relative;
+    display: block;
+	letter-spacing: 0.08em;
+    font-size: 5vw;
+}
+
+.logo {
+	width: 180px;
+}
