@@ -1,7 +1,7 @@
 node('java-docker-slave') {
     stage ('CheckOut GitHub') {
         
-     	 checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'githubjon', url: 'https://github.com/juananmora/demo-minsait-local.git']]])
+     	 checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'github', url: 'https://github.com/juananmora/demo-minsait-local.git']]])
 	}
     stage ('Build') {
          sh "mvn package" 
