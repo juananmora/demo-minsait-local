@@ -1,20 +1,15 @@
-<p>&nbsp;</p>
-
-<table align="center">
-  <tr>
-	  <td>
-			<a href="http://www.springframework.org">
-				<img border="0" align="center" src="../images/poweredBySpring.gif" alt="Powered by the Spring Framework"/>
-			</a>
-		</td>
-		<td>
-			<a href="http://www.ibatis.com">
-				<img border="0" align="center" src="../images/poweredby.gif" alt="Powered by iBATIS"/>
-			</a>
-		</td>
-	</tr>
-</table>
-
-<p align="center">
-	(Currently running on the Spring web tier)
-</p>
+<div id="footbar" class="container-wrapper">
+	<div class="container-wrapper-footbar-logo">
+		<img class="logo" src="../img-minsait/minsait_logo_white.png" title="Minsait" alt="Minsait">
+	</div>
+	<div class="end-logo">
+		<img class="logo" src="../img-minsait/minsait_endlogo_white.svg" title="Minsait" alt="Minsait">
+	</div>
+</div>
+<script type="text/javascript">
+	window.onload = function() {
+		document.getElementsByTagName("html")[0].style.display="block"
+		}
+</script>
+</body>
+</html>

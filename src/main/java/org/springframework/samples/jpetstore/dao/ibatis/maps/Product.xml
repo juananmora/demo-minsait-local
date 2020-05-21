@@ -13,18 +13,19 @@
     <result property="name" column="name" columnIndex="2"/>
     <result property="description" column="descn" columnIndex="3"/>
     <result property="categoryId" column="category" columnIndex="4"/>
+    <result property="image" column="image" columnIndex="5"/>
   </resultMap>
 
   <select id="getProduct" resultMap="result">
-    select productid, name, descn, category from product where productid = #value#
+    select productid, name, descn, category, image from product where productid = #value#
   </select>
 
   <select id="getProductListByCategory" resultMap="result">
-    select productid, name, descn, category from product where category = #value#
+    select productid, name, descn, category, image from product where category = #value#
   </select>
 
   <select id="searchProductList" resultMap="result">
-    select productid, name, descn, category from product
+    select productid, name, descn, category, image from product
     <dynamic prepend="where">
       <iterate property="keywordList" open="(" close=")" conjunction="OR">
         lower(name) like #keywordList[]# OR lower(category) like #keywordList[]# OR lower(descn) like #keywordList[]#

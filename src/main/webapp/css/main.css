@@ -1,22 +1,36 @@
+html {
+	display: none;
+}
+
 html, body {
 	margin: 0;
 	padding: 0;
 	font-family: Arial;
 	font-weight: 400;
-	overflow-y: hidden;
+	height: 100%;
+}
+
+.content {
+	margin-bottom: 5em;
+}
+
+#welcome-index, .background_welcome {
+	background: url(../img-minsait/Welcome.jpg) no-repeat
+		center fixed;
+	background-size: cover;
 }
 
 a {
 	text-decoration: none;
 }
 
-#carrito{
-	width: 50px;
+#carrito {
+	width: 30px;
 	position: relative;
-	top: 15px;
+	top: 10px;
 }
 
-.container-wrapper{
+.container-wrapper {
 	margin: 0 auto;
 	overflow: hidden;
 	position: relative;
@@ -26,45 +40,38 @@ a {
 	overflow: visible;
 }
 
-.container-wrapper-logo{
-    padding: 15px 25px;
+.container-wrapper-logo {
+	padding: 15px 25px;
 	width: 60%;
 	display: inline-block;
 }
 
-.container-wrapper-footbar-logo{
-    padding: 22px 25px;
+.container-wrapper-footbar-logo {
+	padding: 22px 25px;
 	width: 85%;
 	display: inline-block;
 }
 
-#content{
-	background: url(../img-minsait/GettyImages-697387737.jpg) no-repeat center fixed;
-	background-size: cover;
-	height: 100%;
-}
-
-.end-logo{
+.end-logo {
 	display: inline-block;
 }
 
 #cartbar {
-	width: 15%;
 	display: inline-block;
 }
 
 #buscador {
-	width: 15%;
 	display: inline-block;
 }
 
-.container-wrapper-logo-inner{
+.container-wrapper-logo-inner {
 	margin: auto;
 }
 
 #topbar {
-	border-bottom: 1px solid #E4DEDB;
-	height:5em;
+	border-bottom: 2px solid #284753;
+	height: 5em;
+	background-color: white;
 }
 
 #footbar {
@@ -75,49 +82,268 @@ a {
 	bottom: 0;
 }
 
-#footbar .logo{
+#footbar .logo {
 	width: 105px;
 }
 
-#welcome-box{
+.form_table_title{
+	font-size: 1.3em;
 	background-color: #004153;
 	color: white;
-	position: absolute;
+	padding: .5em;
+}
+
+#welcome-box {
+	background-color: #004153;
+	color: white;
+	position: relative;
 	display: inline-block;
 	font-size: .8em;
 	height: 10em;
 	left: 10em;
-	top: 25%;
+	margin-top: 4em;
 	padding: 4em;
-	width:25em;
+	width: 25em;
 	font-family: PlayfairDisplay-Regular;
-    font-size: 1vw;
+	font-size: 1vw;
 }
 
-#welcome-box:after{
+#welcome-box:after {
+	
 }
 
-.vertical-separator{
+.vertical-separator {
 	border-bottom: 2px solid white;
-	content:"";
+	content: "";
 	display: block;
 	width: 25%;
 	margin: 5px 0 15px 0;
 }
 
-#welcome-subtitle{
-    font-size: 1vw;
+.welcome-subtitle {
+	font-size: 1vw;
+	display: block;
+	margin: 10px 0;
 }
 
-#welcome-text{
+.welcome-subtitle a {
+	color: #f7ac6f;
+	font-weight: bold;
+	font-size: 1.2vw;
+	border-bottom: 2px solid #f7ac6f;
+}
+
+#welcome-text {
 	text-align: center;
 	font-size: 60px;
 	position: relative;
-    display: block;
+	display: block;
 	letter-spacing: 0.08em;
-    font-size: 5vw;
+	font-size: 5vw;
 }
 
 .logo {
 	width: 180px;
+}
+
+.form-heading {
+	color: #fff;
+	font-size: 23px;
+}
+
+h2.panel {
+	color: #444444;
+	font-size: 18px;
+	margin: 0 0 8px 0;
+}
+
+p.panel {
+	color: #777777;
+	font-size: 14px;
+	margin-bottom: 30px;
+	line-height: 24px;
+}
+
+.form-control {
+	background: #f7f7f7 none repeat scroll 0 0;
+	border: 1px solid #d4d4d4;
+	border-radius: 4px;
+	font-size: 14px;
+	height: 50px;
+	line-height: 50px;
+}
+
+input.form-control {
+	padding: 1em;
+	text-align: center;
+}
+
+.main-div {
+	background: #ffffff none repeat scroll 0 0;
+	border-radius: 2px;
+	margin: 10px auto 30px;
+	max-width: 38%;
+	text-align: center;
+	border: 1px solid black;
+	margin-bottom: 4em;
+	padding: 40px 0;
+}
+
+.form-group {
+	margin-bottom: 15px;
+}
+
+.button_table {
+	background: rgb(225, 225, 225) none repeat scroll 0 0;
+	border: 1px solid rgb(173, 173, 173);
+	color: black;
+	padding: 8px;
+	font-size: 0.8em;
+	margin: 0 auto;
+}
+
+.btn.btn-primary {
+	background: #004153 none repeat scroll 0 0;
+	color: #ffffff;
+	font-size: 14px;
+	height: 50px;
+	min-width: 90px;
+	border-radius: 5px;
+	padding: 0;
+	width: 25%;
+}
+
+.table_total {
+	text-align: right;
+}
+
+.checkout_btn {
+	text-align: center;
+}
+
+.title h2, .title h3, .title h4{
+	text-align: center;
+	margin: 0;
+	padding: 1em 0 1.5em 0;
+}
+
+.odd {
+	background-color: #dfdfdf;
+}
+
+#shop_table {
+	border-spacing: 2px;
+	margin: 0 auto;
+	border-collapse: collapse;
+	min-width: 60%;
+}
+
+#shop_table th {
+	background-color: #284753;
+	color: white;
+}
+
+#shop_table td, #shop_table th {
+	padding: 15px;
+}
+
+#summary_table {
+	border-spacing: 2px;
+	margin: 0 auto;
+	border-collapse: collapse;
+	min-width: 60%;
+}
+
+#summary_table th {
+	background-color: #284753;
+	color: white;
+}
+
+#summary_table td, #summary_table th {
+	padding: 15px;
+}
+
+#main_menu_link a {
+	padding: 8px;
+	border: 2px solid #284753;
+	line-height: 26px;
+	font-size: 0.9em;
+	background-color: #284753;
+	color: white;
+}
+
+#categories {
+	width: 800px;
+	margin: auto;
+}
+
+#categories .card {
+	border: 2px solid #284753;
+	margin-bottom: 25px;
+	background-color: white;
+}
+
+.card_img {
+	width: 130px;
+	height: 130px;
+	border: 3px solid #284753;
+	display: inline-block;
+}
+
+.card_text {
+	float: right;
+	width: 657px;
+	height: 136px;
+	border-left: 3px solid #284753
+}
+
+.card_text_container {
+	padding: 5px 10px
+}
+
+.card_title {
+	width: 60%;
+	display: block;
+	height: 1.4em;
+	font-weight: bold;
+}
+
+.card_products{
+	border-bottom: 3px solid #ffe980;
+}
+
+.card_services{
+	border-bottom: 3px solid #639eca;
+}
+
+.card_assets{
+	border-bottom: 3px solid #f7ac6f;
+}
+
+.card_links {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.category_product {
+	background: url(../img-minsait/Tecnologia_innovacion/Products.png)
+		no-repeat center;
+	background-size: cover;
+}
+
+.category_service {
+	background: url(../img-minsait/Tecnologia_innovacion/Services.png)
+		no-repeat center;
+	background-size: cover;
+}
+
+.category_assets {
+	background: url(../img-minsait/Tecnologia_innovacion/Assets.png)
+		no-repeat center;
+	background-size: cover;
+}
+
+.pagination *{
+	color: white;
 }

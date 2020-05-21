@@ -1,4 +1,4 @@
-
+<!-- 
 <c:if test="${!empty userSession.myList}">
 <p>&nbsp;</p>
 <table align="right" bgcolor="#008800" border="0" cellspacing="2" cellpadding="3">
@@ -31,3 +31,5 @@
 
 </table>
 </c:if>
+
+ -->

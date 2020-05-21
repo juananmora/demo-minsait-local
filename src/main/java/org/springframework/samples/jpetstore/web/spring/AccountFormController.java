@@ -22,7 +22,7 @@ import org.springframework.web.util.WebUtils;
  */
 public class AccountFormController extends SimpleFormController {
 
-	public static final String[] LANGUAGES = {"english", "japanese"};
+	protected static final String[] LANGUAGES = {"english", "japanese"};
 
 	private PetStoreFacade petStore;
 

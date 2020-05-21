@@ -7,16 +7,16 @@
 	<link href="css/main.css" rel="stylesheet">
 </head>
 
-<body>
+<body id="welcome-index">
 	<div id="topbar" class="container-wrapper header-navbar">
 		<div class="container-wrapper-logo">
-			<a class="logo navbar-btn" href="shop/index.do" title="Inicio">
+			<a class="logo navbar-btn" href="" title="Inicio">
 				<img class="logo" src="img-minsait/logominsait.png" title="Minsait" alt="Minsait">
 			</a>
 		</div>
 		<div id="cartbar">
 			<A href="shop/viewCart.do">
-				<IMG border=0 id="carrito" alt="Carrito" src="img-minsait/contratar.png">
+				<IMG border=0 id="carrito" alt="Carrito" src="img-minsait/cart.png">
 			</A>
 			|
 			<A href="shop/signonForm.do">
@@ -29,17 +29,21 @@
 		</div>
 		<div id="buscador">
 			<form action="shop/searchProducts.do">
-				<input name=keyword size=14> <input type="submit" value="Search" name="Search"></input></input>
+			<input id="search_box" type="text" name=keyword size=14/> <input id="search_button" type="submit" value="Search" name="Search"></input>	
+			</form>
 		</div>
 	</div>
-	<div id="content" class="container-wrapper">
+	<div id="content-index" class="container-wrapper">
 		<div id="welcome-box">
 			<span id="welcome-text">
 				Welcome!
 			</span>
 			<span class="vertical-separator"></span>
-			<span id="welcome-subtitle">
-				Esta es la p&aacute;gina de bienvenida de la Demo Minsait
+			<span class="welcome-subtitle">
+				This is the welcome page of the demo Minsait page!
+			</span>
+			<span class="welcome-subtitle">
+				You can check our products <a id="navigate_to_index" href="shop/index.do">here</a><br> Checking new Release</br>
 			</span>
 		</div>
 	</div>
@@ -51,6 +55,12 @@
 			<img class="logo" src="img-minsait/minsait_endlogo_white.svg" title="Minsait" alt="Minsait">
 		</div>
 	</div>
+	
+<script type="text/javascript">
+	window.onload = function() {
+		document.getElementsByTagName("html")[0].style.display="block"
+		}
+</script>
 </body>
 
 </html>
