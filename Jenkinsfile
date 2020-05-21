@@ -44,7 +44,7 @@ node('java-docker-slave') {
 				//sh "docker stop tomcatdemo"
 				//sh "docker rm tomcatdemo"
 				sh "docker rm -f tomcatminsait > /dev/null 2>&1 && echo 'removed container' || echo 'nothing to remove'"
-				sh "docker create -it --add-host jpetstore-db.bmc.aws.local:172.23.0.3 --network netcompose --name tomcatminsait -p 8075:8080 juananmora/tomcatminsait:'$BUILD_NUMBER' catalina.sh run"
+				sh "docker create -it --add-host jpetstore-db.bmc.aws.local:172.23.0.3 --network netcompose --name tomcatminsait -p 8076:8080 juananmora/tomcatminsait:'$BUILD_NUMBER' catalina.sh run"
 				sh "docker start tomcatminsait"
 			 }
 		}
