@@ -7,7 +7,7 @@ node('java-docker-slave') {
          sh "mvn package" 
     }
 	stage ('Upload Artifact') {
-	   nexusPublisher nexusInstanceId: 'localNexus', nexusRepositoryId: 'snapshots', packages: [[$class: 'MavenPackage', mavenAssetList: [[classifier: '', extension: '', filePath: 'target/demominsait.war']], mavenCoordinate: [artifactId: 'demominsait', groupId: 'org.jenkins-ci.demominsait', packaging: 'war', version: '$BUILD_NUMBER']]]
+	   nexusPublisher nexusInstanceId: 'localNexus', nexusRepositoryId: 'releases', packages: [[$class: 'MavenPackage', mavenAssetList: [[classifier: '', extension: '', filePath: 'target/demominsait.war']], mavenCoordinate: [artifactId: 'demominsait', groupId: 'org.jenkins-ci.demominsait', packaging: 'war', version: '$BUILD_NUMBER']]]
 	}
 	stage('SonarQube analysis') {
 		withSonarQubeEnv('sonar') {
