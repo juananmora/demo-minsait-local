@@ -7,7 +7,7 @@ node('java-docker-slave') {
          sh "mvn package" 
     }
 	stage ('Upload Artifact') {
-	   nexusPublisher nexusInstanceId: 'localNexus', nexusRepositoryId: 'releases', packages: [[$class: 'MavenPackage', mavenAssetList: [[classifier: '', extension: '', filePath: 'target/demominsait.war']], mavenCoordinate: [artifactId: 'demominsait', groupId: 'org.jenkins-ci.demominsait', packaging: 'war', version: '$BUILD_NUMBER']]]
+	   nexusPublisher nexusInstanceId: 'nexus3', nexusRepositoryId: 'maven-releases', packages: [[$class: 'MavenPackage', mavenAssetList: [[classifier: '', extension: '', filePath: 'target/demominsait.war']], mavenCoordinate: [artifactId: 'demominsait', groupId: 'org.jenkins-ci.demominsait', packaging: 'war', version: '$BUILD_NUMBER']]]
 	}
 	stage('SonarQube analysis') {
 		withSonarQubeEnv('sonar') {
@@ -25,7 +25,7 @@ node('java-docker-slave') {
     docker.withTool("docker") { 
 		withDockerServer([credentialsId: "", uri: "unix:///var/run/docker.sock"]) { 
 			stage ('Deploy') {
-				 sh "docker cp ./target/demominsait.war tomcatcomposedos:/opt/apache-tomcat-8.5.37/webapps/"
+				 sh "docker cp ./target/demominsait.war tomcatcomposedos:/usr/local/tomcat/webapps/"
 				 sh "docker restart tomcatcomposedos"
 			}
 			stage ('Updates BBDD'){
